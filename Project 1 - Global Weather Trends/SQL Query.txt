@@ -1,0 +1,3 @@
+SELECT * FROM city_list WHERE city_list.country='Chile';
+
+SELECT city_data.year as year, city_data.avg_temp as santiago_avg_temp, global_data.avg_temp as global_avg_temp FROM (city_data JOIN global_data ON city_data.year=global_data.year) WHERE city_data.city='Santiago';
